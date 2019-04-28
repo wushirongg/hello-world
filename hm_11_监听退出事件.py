@@ -35,7 +35,7 @@ while True:
 
         # 判断事件类型是否是退出事件
         if event.type == pygame.QUIT:
-            print("游戏退出...")
+            print("游戏退出了哦...")
 
             # quit 卸载所有的模块
             pygame.quit()
