@@ -47,7 +47,7 @@ while True:
     hero_rect.y -= 1
 
     # 判断飞机的位置
-    if hero_rect.y <= 0:
+    if hero_rect.y <= -126:
         hero_rect.y = 700
 
     # 3. 调用blit方法绘制图像
