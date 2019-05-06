@@ -3,8 +3,8 @@ from threading import Timer
 from wxpy import *
 import requests
 
-# bot = Bot(console_qr=True, cache_path=True)
-bot = Bot(cache_path=True)  # 连接微信,会出现一个登陆微信的二维码
+bot = Bot(console_qr=True, cache_path=True)
+# bot = Bot(cache_path=True)  # 连接微信,会出现一个登陆微信的二维码
 
 
 def get_news():
@@ -34,6 +34,7 @@ def send_news():
         my_friend = bot.friends().search(u'啾咪、')[0]  # 这里是你微信好友的昵称
         my_friend.send(contents[0])
         my_friend.send(contents[1])
+        my_friend.send(u'宝贝，早安！你是最美的宝宝！爱你哟！')
         t = Timer(86400,send_news)  # 这里是一天发送一次，86400s = 24h
 
         t.start()
